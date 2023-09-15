@@ -54,21 +54,6 @@ Before getting started, ensure you have the following components installed:
 - [Docker](https://www.docker.com/products/docker-desktop/)
 
 
-### Optional Requirement
-
-1. **Docker.**
-- **The first command creates the jar file.**
-- **The second command builds the docker image.**
-- **The third command runs the docker build.**
-
-    ```bash
-   maven install
-   
-   docker build -t task:latest . 
-   
-   docker run -d -p 6082:6082 task:latest
-    ```
-
 ### Installation
 
 1. **Clone the Repository:**
@@ -78,11 +63,29 @@ Before getting started, ensure you have the following components installed:
    cd klasha-api
    ```
 
+
+### Optional Requirement
+
+1. **Docker.**
+- **The first command creates the jar file.**
+- **The second command builds the docker image.**
+- **The third command runs the docker build.**
+
+    ```bash
+   mvn install
+   
+   docker build -t task:latest . 
+   
+   docker run -d -p 6082:6082 task:latest
+    ```
+
 ## Build and Run the Application:
 
 Execute the following command to build and run the application:
 
 ````bash
+mvn install
+
 mvn spring-boot:run
 ````
 
